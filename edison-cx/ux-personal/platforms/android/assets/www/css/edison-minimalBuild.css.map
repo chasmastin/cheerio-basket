@@ -1,0 +1,1 @@
+{"version":3,"sources":["edison-gulp-utils.scss"],"names":[],"mappings":"AAAA,0CAAY;AAEZ,0BAA0B","file":"edison-minimalBuild.css","sourcesContent":["@import url(\"../fonts/spark-ux-base.css\");\n\n/* Walmart Colors below */"],"sourceRoot":"/source/"}

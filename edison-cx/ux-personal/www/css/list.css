@@ -1,0 +1,113 @@
+body {
+  font-family: 'Myriad Pro', 'PT Sans', sans-serif; }
+
+.footer h5.ui-title {
+  text-align: left; }
+
+.footer .total {
+  display: block;
+  float: right; }
+
+.header .navbar li .departments, .header .navbar li .need {
+  padding: 17px;
+  position: relative; }
+  .header .navbar li .departments span, .header .navbar li .need span {
+    position: relative;
+    z-index: 2; }
+
+.header .navbar li .pickup {
+  text-align: left;
+  padding-left: 36px;
+  padding-right: 36px; }
+  .header .navbar li .pickup .fa {
+    display: block;
+    float: right;
+    margin-top: 2px; }
+
+.header .navbar li .departments:before {
+  position: absolute;
+  font-family: 'FontAwesome';
+  top: 50%;
+  left: 50%;
+  font-size: 40px;
+  margin-top: -24px;
+  margin-left: -24px;
+  color: #efefef;
+  z-index: 1;
+  content: "\f200"; }
+
+.header .navbar li .need:before {
+  position: absolute;
+  font-family: 'FontAwesome';
+  top: 50%;
+  left: 50%;
+  font-size: 40px;
+  margin-top: -24px;
+  margin-left: -24px;
+  color: #efefef;
+  z-index: 1;
+  content: "\f080"; }
+
+/* round button */
+.round-button {
+  width: 15%;
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  z-index: 2000; }
+  .round-button .round-button-circle {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #e9e9e9;
+    box-shadow: 1px 1px 2px grey; }
+    .round-button .round-button-circle :hover {
+      background: #30588e; }
+    .round-button .round-button-circle a, .round-button .round-button-circle :hover a {
+      display: block;
+      float: left;
+      width: 100%;
+      padding-top: 50%;
+      padding-bottom: 50%;
+      line-height: 1em;
+      margin-top: -0.5em;
+      text-align: center;
+      color: #fff;
+      font-family: Verdana;
+      font-size: 2em;
+      font-weight: bold;
+      text-decoration: none; }
+
+.your-list-item {
+  position: relative; }
+  .your-list-item .label {
+    position: relative;
+    z-index: 10;
+    display: table;
+    width: 100%; }
+    .your-list-item .label .row {
+      display: table-row; }
+      .your-list-item .label .row div {
+        display: table-cell;
+        white-space: normal;
+        vertical-align: middle; }
+    .your-list-item .label .icon {
+      width: 7%; }
+    .your-list-item .label .quantity {
+      width: 17%; }
+    .your-list-item .label .product {
+      width: 53%; }
+    .your-list-item .label .price {
+      width: 23%;
+      text-align: right; }
+  .your-list-item .need-bar {
+    background-color: #efefef;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; }
+
+/*# sourceMappingURL=list.css.map */

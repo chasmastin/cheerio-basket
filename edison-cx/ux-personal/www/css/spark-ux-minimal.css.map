@@ -1,0 +1,1 @@
+{"version":3,"sources":["spark-ux-base.scss"],"names":[],"mappings":"AAAA,0CAAY;AAEZ,0BAA0B","file":"spark-ux-minimal.css","sourcesContent":["@import url(\"../fonts/spark-ux-base.css\");\n\n/* Walmart Colors below */"],"sourceRoot":"/source/"}
