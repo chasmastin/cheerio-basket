@@ -6,6 +6,7 @@ import thunk from 'redux-thunk';
 
 import AppBar from 'material-ui/AppBar'
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card'
+import {Avatar} from 'material-ui/Avatar'
 import Chip from 'material-ui/Chip'
 import ContentLink from 'material-ui/svg-icons/content/link';
 import Divider from 'material-ui/Divider'
@@ -34,6 +35,10 @@ const constants = require('./backstage-constants.js')
 // Needed for onTouchTap 
 // http://stackoverflow.com/a/34015469/988941 
 require('react-tap-event-plugin')();
+
+
+
+
 
 let reducers = {
     App: (state, action) => {
@@ -114,16 +119,12 @@ const BackstageView = ({current, moments, setState}) => {
     let result =
         <div className="backstage">
             <AppBar
-                title="Backstage Prototype Controls"
+                title="List of Items in your cart"
                 iconElementLeft={
                     <IconMenu
                         iconButtonElement={ <IconButton><MenuIcon color="white" /></IconButton> }
                         targetOrigin={{horizontal: 'right', vertical: 'top'}}
                         anchorOrigin={{horizontal: 'right', vertical: 'top'}} >
-                        <MenuItem
-                            leftIcon={<TabletIcon />}
-                            primaryText="Car"
-                            onClick={() => window.open("/ux-car/", "_blank") } />
                         <MenuItem
                             leftIcon={<SmartphoneIcon />}
                             primaryText="Personal Device"
@@ -145,7 +146,6 @@ const BackstageView = ({current, moments, setState}) => {
                             leftIcon={<ContentLink />}
                             primaryText="Open All"
                             onClick={() => {
-                                window.open("/ux-car/", "_blank")
                                 window.open("/ux-personal/", "_blank")
                                 window.open("/ux-welcome/", "_blank")
                                 window.open("/ux-recipe/", "_blank")
@@ -175,8 +175,8 @@ const MomentView = ({current, moment, setState, index}) => {
         <Card>
             <CardHeader
                 title={ (index+1) + ". "+ moment.label}
-                subtitle={moment.subtitle} 
-                avatar={"images/ux-backstage/thumbnails/"+ (index+1)+"-"+moment.name+".png"}
+                subtitle={moment.price} 
+                avatar={moment.itempic} size = {300}
                 actAsExpander={true}
                 showExpandableButton={true} />
             <CardText
