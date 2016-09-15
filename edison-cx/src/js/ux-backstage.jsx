@@ -15,6 +15,7 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme'
 import IconButton from 'material-ui/IconButton'
 import IconMenu from 'material-ui/IconMenu'
 import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme'
+import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme'
 import MenuIcon from 'material-ui/svg-icons/navigation/menu'
 
 import DockIcon from 'material-ui/svg-icons/hardware/dock'
@@ -29,6 +30,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import Paper from 'material-ui/Paper'
 import {Step, Stepper, StepButton} from 'material-ui/Stepper'
 import {Toolbar, ToolbarTitle} from 'material-ui/Toolbar'
+import {cyan500} from 'material-ui/styles/colors';
 
 const constants = require('./backstage-constants.js')
 
@@ -36,6 +38,19 @@ const constants = require('./backstage-constants.js')
 // http://stackoverflow.com/a/34015469/988941 
 require('react-tap-event-plugin')();
 
+getChildContext() {
+  var myTheme = ThemeManager.getMuiTheme(LightRawTheme);
+
+  //override the properties you want to
+  //import Colors from 'material-ui/lib/styles/colors'
+  myTheme.appBar.color = Colors.<choose-a-color>;
+  myTheme.appBar.height = 50;
+
+  //once done overriding, pass the theme using context
+  return {
+    muiTheme: myTheme
+  };
+}
 
 
 

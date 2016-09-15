@@ -1,7 +1,7 @@
 const constants = {
 	blank: {
 		name: "blank",
-		label: "Inital",
+		label: "Initial",
 		bootstrapColor: "info"
 	},
 	moments: [
