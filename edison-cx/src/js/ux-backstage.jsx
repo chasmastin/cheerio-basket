@@ -38,19 +38,6 @@ const constants = require('./backstage-constants.js')
 // http://stackoverflow.com/a/34015469/988941 
 require('react-tap-event-plugin')();
 
-getChildContext() {
-  var myTheme = ThemeManager.getMuiTheme(LightRawTheme);
-
-  //override the properties you want to
-  //import Colors from 'material-ui/lib/styles/colors'
-  myTheme.appBar.color = Colors.<choose-a-color>;
-  myTheme.appBar.height = 50;
-
-  //once done overriding, pass the theme using context
-  return {
-    muiTheme: myTheme
-  };
-}
 
 
 
